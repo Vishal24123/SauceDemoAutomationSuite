@@ -1,0 +1,2238 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary"></span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">May 12, 2025 05:23:53 pm</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>May 12, 2025 05:23:53 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>May 12, 2025 05:32:03 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>19</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>1</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='95%'>
+<b>19</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='5%'><b>1</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='96%'><b>28</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='3%'><b>1</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='99%'><b>202</b> steps passed</small></div>
+<div>
+<small data-tooltip='0%'><b>1</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"To verify user can add multiple products to cart":26.056,"To verify a product can be added to cart":31.915,"Add to Cart Button Presence for Each Product":12.24,"Add to Cart Button Changes to Remove After Clicking the button":11.054,"To verify Add to Cart Button Responsiveness":10.4,"To verify Cart Count Updates Properly":132.028,"To verify checkout button is disabled when cart is empty":10.553,"To verify user can logout successfully":11.144,"To verify login button enabled after entering valid credentials":6.229,"To verify login fails with the empty fields":5.586,"To verify login with invalid credentials":29.7,"To verify login with valid credentials":59.969,"To verify user can place an order":11.013,"Verify that product images are displayed":11.239,"To verify a product can be removed from cart":71.223,"To verify user can sort products in A-Z order":10.911,"To verify user can sort products in high to low order":10.063,"To verify user can sort products in low to high order":11.362,"To verify user can sort products in Z-A order":11.458,"To verify website loads successfully with stable internet connection":4.913
+};
+</script>
+<div class="row">
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 19,
+failParent: 1,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 28,
+failChild: 1,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 202,
+failGrandChild: 1,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">To verify user can add multiple products to cart</p>
+            <p class="text-sm">
+              <span>5:23:54 pm</span> / <span>00:00:26:056</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">To verify user can add multiple products to cart</h5>
+<span class='badge badge-success'>05.12.2025 5:23:54 pm</span>
+<span class='badge badge-danger'>05.12.2025 5:24:20 pm</span>
+<span class='badge badge-default'>00:00:26:056</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>To validate user can add 2 products to cart</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userOpensTheApplication()">
+                <span>Given user opens the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.verifyUserIsOnLoginPage()">
+                <span>Then verify user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userEntersAnd(java.lang.String,java.lang.String)">
+                <span>When user enters "standard_user" and "secret_sauce"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userClicksOnLoginButton()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifyUserIsOnHomePage()">
+                <span>Then verify user is on home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.userClicksOnAddToCartButtonOfProduct(int)">
+                <span>When user clicks on add to cart button of 2 product</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifyCartQuantityEquals(int)">
+                <span>Then verify cart quantity equals 2</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.userClicksOnCartButton()">
+                <span>When user clicks on cart button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.CartStep.verifyUserIsOnCartPage()">
+                <span>Then verify user is on cart page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.CartStep.verifyProductsAreAddToTheCart(int)">
+                <span>And verify 2 products are add to the cart</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="15"><span class="badge log pass-bg mr-2">Pass</span>To validate user can add 3 products to cart</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userOpensTheApplication()">
+                <span>Given user opens the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.verifyUserIsOnLoginPage()">
+                <span>Then verify user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userEntersAnd(java.lang.String,java.lang.String)">
+                <span>When user enters "standard_user" and "secret_sauce"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userClicksOnLoginButton()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifyUserIsOnHomePage()">
+                <span>Then verify user is on home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.userClicksOnAddToCartButtonOfProduct(int)">
+                <span>When user clicks on add to cart button of 3 product</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifyCartQuantityEquals(int)">
+                <span>Then verify cart quantity equals 3</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.userClicksOnCartButton()">
+                <span>When user clicks on cart button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.CartStep.verifyUserIsOnCartPage()">
+                <span>Then verify user is on cart page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.CartStep.verifyProductsAreAddToTheCart(int)">
+                <span>And verify 3 products are add to the cart</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="28"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">To verify a product can be added to cart</p>
+            <p class="text-sm">
+              <span>5:24:20 pm</span> / <span>00:00:31:915</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">To verify a product can be added to cart</h5>
+<span class='badge badge-success'>05.12.2025 5:24:20 pm</span>
+<span class='badge badge-danger'>05.12.2025 5:24:52 pm</span>
+<span class='badge badge-default'>00:00:31:915</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=28</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="29"><span class="badge log pass-bg mr-2">Pass</span>To validate user can add a product to the cart</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userOpensTheApplication()">
+                <span>Given user opens the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.verifyUserIsOnLoginPage()">
+                <span>Then verify user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userEntersAnd(java.lang.String,java.lang.String)">
+                <span>When user enters "standard_user" and "secret_sauce"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userClicksOnLoginButton()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifyUserIsOnHomePage()">
+                <span>Then verify user is on home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.userClicksOnAddToCartButtonOfTheFirstProduct()">
+                <span>When user clicks on add to cart button of the first product</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifyCartQuantityEquals(int)">
+                <span>Then verify cart quantity equals 1</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.userClicksOnCartButton()">
+                <span>When user clicks on cart button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.CartStep.verifyUserIsOnCartPage()">
+                <span>Then verify user is on cart page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.CartStep.verifyTheProductIsAddToTheCart()">
+                <span>And verify the product is add to the cart</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="42"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Add to Cart Button Presence for Each Product</p>
+            <p class="text-sm">
+              <span>5:24:52 pm</span> / <span>00:00:12:240</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Add to Cart Button Presence for Each Product</h5>
+<span class='badge badge-success'>05.12.2025 5:24:52 pm</span>
+<span class='badge badge-danger'>05.12.2025 5:25:04 pm</span>
+<span class='badge badge-default'>00:00:12:240</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=42</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="43"><span class="badge log pass-bg mr-2">Pass</span>Verify each product has an Add to Cart button</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userOpensTheApplication()">
+                <span>Given user opens the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.verifyUserIsOnLoginPage()">
+                <span>Then verify user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userEntersAnd(java.lang.String,java.lang.String)">
+                <span>When user enters "standard_user" and "secret_sauce"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userClicksOnLoginButton()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifyUserIsOnHomePage()">
+                <span>Then verify user is on home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifyEachProductHasAddToCartButton()">
+                <span>And verify each product has add to cart button</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="52"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Add to Cart Button Changes to Remove After Clicking the button</p>
+            <p class="text-sm">
+              <span>5:25:04 pm</span> / <span>00:00:11:054</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Add to Cart Button Changes to Remove After Clicking the button</h5>
+<span class='badge badge-success'>05.12.2025 5:25:04 pm</span>
+<span class='badge badge-danger'>05.12.2025 5:25:15 pm</span>
+<span class='badge badge-default'>00:00:11:054</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=52</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="53"><span class="badge log pass-bg mr-2">Pass</span>Verify Add to Cart button changes to Remove after clicking it</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userOpensTheApplication()">
+                <span>Given user opens the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.verifyUserIsOnLoginPage()">
+                <span>Then verify user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userEntersAnd(java.lang.String,java.lang.String)">
+                <span>When user enters "standard_user" and "secret_sauce"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userClicksOnLoginButton()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifyUserIsOnHomePage()">
+                <span>Then verify user is on home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.userClicksOnAddToCartButtonOfTheFirstProduct()">
+                <span>When user clicks on add to cart button of the first product</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifyTheButtonChangedToRemoveButton()">
+                <span>Then verify the button changed to remove button</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="63"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">To verify Add to Cart Button Responsiveness</p>
+            <p class="text-sm">
+              <span>5:25:15 pm</span> / <span>00:00:10:400</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">To verify Add to Cart Button Responsiveness</h5>
+<span class='badge badge-success'>05.12.2025 5:25:15 pm</span>
+<span class='badge badge-danger'>05.12.2025 5:25:26 pm</span>
+<span class='badge badge-default'>00:00:10:400</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=63</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="64"><span class="badge log pass-bg mr-2">Pass</span>To validate Add to Cart Button Responsiveness</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userOpensTheApplication()">
+                <span>Given user opens the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.verifyUserIsOnLoginPage()">
+                <span>Then verify user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userEntersAnd(java.lang.String,java.lang.String)">
+                <span>When user enters "standard_user" and "secret_sauce"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userClicksOnLoginButton()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifyUserIsOnHomePage()">
+                <span>Then verify user is on home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.userClicksOnAddToCartButtonOfTheFirstProduct()">
+                <span>When user clicks on add to cart button of the first product</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifyButtonResponseShouldOccurWithinSecond(int)">
+                <span>Then verify button response should occur within 1 second</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="74"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">To verify  Cart Count Updates Properly</p>
+            <p class="text-sm">
+              <span>5:25:26 pm</span> / <span>00:02:12:028</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">To verify Cart Count Updates Properly</h5>
+<span class='badge badge-success'>05.12.2025 5:25:26 pm</span>
+<span class='badge badge-danger'>05.12.2025 5:27:38 pm</span>
+<span class='badge badge-default'>00:02:12:028</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=74</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="75"><span class="badge log pass-bg mr-2">Pass</span>Verify cart count updates when products are added and removed</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userOpensTheApplication()">
+                <span>Given user opens the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.verifyUserIsOnLoginPage()">
+                <span>Then verify user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userEntersAnd(java.lang.String,java.lang.String)">
+                <span>When user enters "standard_user" and "secret_sauce"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userClicksOnLoginButton()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifyUserIsOnHomePage()">
+                <span>Then verify user is on home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.userClicksOnAddToCartButtonOfTheFirstProduct()">
+                <span>When user clicks on add to cart button of the first product</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifyCartQuantityEquals(int)">
+                <span>Then verify cart quantity equals 1</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.userClicksOnCartButton()">
+                <span>When user clicks on cart button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.CartStep.verifyUserIsOnCartPage()">
+                <span>Then verify user is on cart page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.CartStep.verifyTheProductIsAddToTheCart()">
+                <span>And verify the product is add to the cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.CartStep.userClicksOnRemoveButtonOfTheProduct()">
+                <span>When user clicks on remove button of the product</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.CartStep.verifyCartPageIsEmpty()">
+                <span>Then verify cart page is empty</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.CartStep.userNavigatesBackToTheHomePage()">
+                <span>When user navigates back to the home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifyCartQuantityIsNull()">
+                <span>Then verify cart quantity is null</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="92"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">To verify checkout button is disabled when cart is empty</p>
+            <p class="text-sm">
+              <span>5:27:38 pm</span> / <span>00:00:10:553</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">To verify checkout button is disabled when cart is empty</h5>
+<span class='badge badge-success'>05.12.2025 5:27:38 pm</span>
+<span class='badge badge-danger'>05.12.2025 5:27:48 pm</span>
+<span class='badge badge-default'>00:00:10:553</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=92</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="93"><span class="badge log fail-bg mr-2">Fail</span>To validate checkout button is disabled when cart is empty</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userOpensTheApplication()">
+                <span>Given user opens the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.verifyUserIsOnLoginPage()">
+                <span>Then verify user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userEntersAnd(java.lang.String,java.lang.String)">
+                <span>When user enters "standard_user" and "secret_sauce"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userClicksOnLoginButton()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifyUserIsOnHomePage()">
+                <span>Then verify user is on home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.userClicksOnCartButton()">
+                <span>When user clicks on cart button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.CartStep.verifyUserIsOnCartPage()">
+                <span>Then verify user is on cart page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.automation.steps.CartStep.verifyCheckoutButtonIsDisabled()">
+                <span>And verify checkout button is disabled</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at com.automation.steps.CartStep.verifyCheckoutButtonIsDisabled(CartStep.java:51)
+	at ✽.verify checkout button is disabled(file:///C:/Users/291498/IdeaProjects/SauceDemoAutomation/src/test/resources/features/CheckutButtonDisabled.feature:12)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="104"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">To verify user can logout successfully</p>
+            <p class="text-sm">
+              <span>5:27:48 pm</span> / <span>00:00:11:144</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">To verify user can logout successfully</h5>
+<span class='badge badge-success'>05.12.2025 5:27:48 pm</span>
+<span class='badge badge-danger'>05.12.2025 5:27:59 pm</span>
+<span class='badge badge-default'>00:00:11:144</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=104</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="105"><span class="badge log pass-bg mr-2">Pass</span>To validate that user can logout successfully</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userOpensTheApplication()">
+                <span>Given user opens the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.verifyUserIsOnLoginPage()">
+                <span>Then verify user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userEntersAnd(java.lang.String,java.lang.String)">
+                <span>When user enters "standard_user" and "secret_sauce"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userClicksOnLoginButton()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifyUserIsOnHomePage()">
+                <span>Then verify user is on home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.userClicksOnHamburgerMenu()">
+                <span>When user clicks on hamburger menu</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.userClicksOnLogoutOption()">
+                <span>And user clicks on logout option</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.verifyUserIsOnLoginPage()">
+                <span>Then verify user is on login page</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="116"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">To verify login button enabled after entering valid credentials</p>
+            <p class="text-sm">
+              <span>5:27:59 pm</span> / <span>00:00:06:229</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">To verify login button enabled after entering valid credentials</h5>
+<span class='badge badge-success'>05.12.2025 5:27:59 pm</span>
+<span class='badge badge-danger'>05.12.2025 5:28:06 pm</span>
+<span class='badge badge-default'>00:00:06:229</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=116</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="117"><span class="badge log pass-bg mr-2">Pass</span>To validate login button is enabled after entering valid input</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userOpensTheApplication()">
+                <span>Given user opens the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.verifyUserIsOnLoginPage()">
+                <span>Then verify user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userEntersAnd(java.lang.String,java.lang.String)">
+                <span>When user enters "standard_user" and "secret_sauce"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.verifyLoginButtonIsEnabled()">
+                <span>Then verify login button is enabled</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="124"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">To verify login fails with the empty fields</p>
+            <p class="text-sm">
+              <span>5:28:06 pm</span> / <span>00:00:05:586</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">To verify login fails with the empty fields</h5>
+<span class='badge badge-success'>05.12.2025 5:28:06 pm</span>
+<span class='badge badge-danger'>05.12.2025 5:28:11 pm</span>
+<span class='badge badge-default'>00:00:05:586</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=124</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="125"><span class="badge log pass-bg mr-2">Pass</span>To validate login fails with empty fields</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userOpensTheApplication()">
+                <span>Given user opens the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.verifyUserIsOnLoginPage()">
+                <span>Then verify user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userClicksOnLoginButton()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.verifyErrorMessage()">
+                <span>Then verify error message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="132"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">To verify login with invalid credentials</p>
+            <p class="text-sm">
+              <span>5:28:11 pm</span> / <span>00:00:29:700</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">To verify login with invalid credentials</h5>
+<span class='badge badge-success'>05.12.2025 5:28:11 pm</span>
+<span class='badge badge-danger'>05.12.2025 5:28:41 pm</span>
+<span class='badge badge-default'>00:00:29:700</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=132</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="133"><span class="badge log pass-bg mr-2">Pass</span>To validate user login with invalid credentials</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="134"><span class="badge log pass-bg mr-2">Pass</span>To validate user login with invalid credentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user opens the application</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then verify user is on login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters "locked_out_user" and "secret_sauce"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then verify error message</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="142"><span class="badge log pass-bg mr-2">Pass</span>To validate user login with invalid credentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user opens the application</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then verify user is on login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters "fake_account" and "letmeinplease"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then verify error message</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="150"><span class="badge log pass-bg mr-2">Pass</span>To validate user login with invalid credentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user opens the application</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then verify user is on login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters "expired_user" and "outofdate123"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then verify error message</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="158"><span class="badge log pass-bg mr-2">Pass</span>To validate user login with invalid credentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user opens the application</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then verify user is on login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters "no_access_user" and "deniedpass"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then verify error message</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="166"><span class="badge log pass-bg mr-2">Pass</span>To validate user login with invalid credentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user opens the application</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then verify user is on login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters "wrong_credentials" and "incorrect123"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then verify error message</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="174"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">To verify login with valid credentials</p>
+            <p class="text-sm">
+              <span>5:28:41 pm</span> / <span>00:00:59:969</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">To verify login with valid credentials</h5>
+<span class='badge badge-success'>05.12.2025 5:28:41 pm</span>
+<span class='badge badge-danger'>05.12.2025 5:29:41 pm</span>
+<span class='badge badge-default'>00:00:59:969</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=174</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="175"><span class="badge log pass-bg mr-2">Pass</span>To validate user login with valid credentials</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="176"><span class="badge log pass-bg mr-2">Pass</span>To validate user login with valid credentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user opens the application</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then verify user is on login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters "standard_user" and "secret_sauce"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then verify user is on home page</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="184"><span class="badge log pass-bg mr-2">Pass</span>To validate user login with valid credentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user opens the application</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then verify user is on login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters "problem_user" and "secret_sauce"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then verify user is on home page</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="192"><span class="badge log pass-bg mr-2">Pass</span>To validate user login with valid credentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user opens the application</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then verify user is on login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters "performance_glitch_user" and "secret_sauce"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then verify user is on home page</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="200"><span class="badge log pass-bg mr-2">Pass</span>To validate user login with valid credentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user opens the application</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then verify user is on login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters "error_user" and "secret_sauce"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then verify user is on home page</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="208"><span class="badge log pass-bg mr-2">Pass</span>To validate user login with valid credentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user opens the application</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then verify user is on login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters "visual_user" and "secret_sauce"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then verify user is on home page</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="216"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">To verify user can place an order</p>
+            <p class="text-sm">
+              <span>5:29:41 pm</span> / <span>00:00:11:013</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">To verify user can place an order</h5>
+<span class='badge badge-success'>05.12.2025 5:29:41 pm</span>
+<span class='badge badge-danger'>05.12.2025 5:29:52 pm</span>
+<span class='badge badge-default'>00:00:11:013</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=216</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="217"><span class="badge log pass-bg mr-2">Pass</span>To validate user can place an order</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userOpensTheApplication()">
+                <span>Given user opens the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.verifyUserIsOnLoginPage()">
+                <span>Then verify user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userEntersAnd(java.lang.String,java.lang.String)">
+                <span>When user enters "standard_user" and "secret_sauce"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userClicksOnLoginButton()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifyUserIsOnHomePage()">
+                <span>Then verify user is on home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.userClicksOnAddToCartButtonOfTheFirstProduct()">
+                <span>When user clicks on add to cart button of the first product</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifyCartQuantityEquals(int)">
+                <span>Then verify cart quantity equals 1</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.userClicksOnCartButton()">
+                <span>When user clicks on cart button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.CartStep.verifyUserIsOnCartPage()">
+                <span>Then verify user is on cart page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.CartStep.verifyTheProductIsAddToTheCart()">
+                <span>And verify the product is add to the cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.CartStep.userClickOnCheckoutButton()">
+                <span>When user click on checkout button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.CheckoutStep.verifyUserIsOnCheckoutPage()">
+                <span>Then verify user is on checkout page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.CheckoutStep.userEntersTheCheckoutDetails()">
+                <span>When user enters the checkout details</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.CheckoutStep.userClickOnContinueButton()">
+                <span>And user click on continue button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.ReviewStep.verifyUserIsOnReviewPage()">
+                <span>Then verify user is on review page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.ReviewStep.userClicksOnFinishButton()">
+                <span>When user clicks on finish button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.OrderConfirmationStep.verifyIsOnOrderConfirmationPage()">
+                <span>Then verify is on order confirmation page</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="237"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify that product images are displayed</p>
+            <p class="text-sm">
+              <span>5:29:52 pm</span> / <span>00:00:11:239</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Verify that product images are displayed</h5>
+<span class='badge badge-success'>05.12.2025 5:29:52 pm</span>
+<span class='badge badge-danger'>05.12.2025 5:30:03 pm</span>
+<span class='badge badge-default'>00:00:11:239</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=237</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="238"><span class="badge log pass-bg mr-2">Pass</span>Verify product images are visible</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userOpensTheApplication()">
+                <span>Given user opens the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.verifyUserIsOnLoginPage()">
+                <span>Then verify user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userEntersAnd(java.lang.String,java.lang.String)">
+                <span>When user enters "standard_user" and "secret_sauce"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userClicksOnLoginButton()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifyUserIsOnHomePage()">
+                <span>Then verify user is on home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifyProductImagesAreRendered()">
+                <span>And verify product images are rendered</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="247"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">To verify a product can be removed from cart</p>
+            <p class="text-sm">
+              <span>5:30:03 pm</span> / <span>00:01:11:223</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">To verify a product can be removed from cart</h5>
+<span class='badge badge-success'>05.12.2025 5:30:03 pm</span>
+<span class='badge badge-danger'>05.12.2025 5:31:14 pm</span>
+<span class='badge badge-default'>00:01:11:223</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=247</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="248"><span class="badge log pass-bg mr-2">Pass</span>To validate user can remove a product from the cart</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userOpensTheApplication()">
+                <span>Given user opens the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.verifyUserIsOnLoginPage()">
+                <span>Then verify user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userEntersAnd(java.lang.String,java.lang.String)">
+                <span>When user enters "standard_user" and "secret_sauce"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userClicksOnLoginButton()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifyUserIsOnHomePage()">
+                <span>Then verify user is on home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.userClicksOnAddToCartButtonOfTheFirstProduct()">
+                <span>When user clicks on add to cart button of the first product</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifyCartQuantityEquals(int)">
+                <span>Then verify cart quantity equals 1</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.userClicksOnCartButton()">
+                <span>When user clicks on cart button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.CartStep.verifyUserIsOnCartPage()">
+                <span>Then verify user is on cart page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.CartStep.verifyTheProductIsAddToTheCart()">
+                <span>And verify the product is add to the cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.CartStep.userClicksOnRemoveButtonOfTheProduct()">
+                <span>When user clicks on remove button of the product</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.CartStep.verifyCartPageIsEmpty()">
+                <span>Then verify cart page is empty</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="263"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">To verify user can sort products in A-Z order</p>
+            <p class="text-sm">
+              <span>5:31:14 pm</span> / <span>00:00:10:911</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">To verify user can sort products in A-Z order</h5>
+<span class='badge badge-success'>05.12.2025 5:31:14 pm</span>
+<span class='badge badge-danger'>05.12.2025 5:31:25 pm</span>
+<span class='badge badge-default'>00:00:10:911</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=263</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="264"><span class="badge log pass-bg mr-2">Pass</span>To validate user can sort products in A-Z order</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userOpensTheApplication()">
+                <span>Given user opens the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.verifyUserIsOnLoginPage()">
+                <span>Then verify user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userEntersAnd(java.lang.String,java.lang.String)">
+                <span>When user enters "standard_user" and "secret_sauce"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userClicksOnLoginButton()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifyUserIsOnHomePage()">
+                <span>Then verify user is on home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.userClicksOnAZSorting()">
+                <span>When user clicks on A-Z sorting</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifySortingIsCompleted()">
+                <span>Then verify sorting is completed</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="274"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">To verify user can sort products in high to low order</p>
+            <p class="text-sm">
+              <span>5:31:25 pm</span> / <span>00:00:10:063</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">To verify user can sort products in high to low order</h5>
+<span class='badge badge-success'>05.12.2025 5:31:25 pm</span>
+<span class='badge badge-danger'>05.12.2025 5:31:35 pm</span>
+<span class='badge badge-default'>00:00:10:063</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=274</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="275"><span class="badge log pass-bg mr-2">Pass</span>To validate user can sort products in high to low order</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userOpensTheApplication()">
+                <span>Given user opens the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.verifyUserIsOnLoginPage()">
+                <span>Then verify user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userEntersAnd(java.lang.String,java.lang.String)">
+                <span>When user enters "standard_user" and "secret_sauce"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userClicksOnLoginButton()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifyUserIsOnHomePage()">
+                <span>Then verify user is on home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.userClicksOnHighLowSorting()">
+                <span>When user clicks on high-low sorting</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifySortingIsCompleted()">
+                <span>Then verify sorting is completed</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="285"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">To verify user can sort products in low to high order</p>
+            <p class="text-sm">
+              <span>5:31:35 pm</span> / <span>00:00:11:362</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">To verify user can sort products in low to high order</h5>
+<span class='badge badge-success'>05.12.2025 5:31:35 pm</span>
+<span class='badge badge-danger'>05.12.2025 5:31:47 pm</span>
+<span class='badge badge-default'>00:00:11:362</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=285</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="286"><span class="badge log pass-bg mr-2">Pass</span>To validate user can sort products in low to high order</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userOpensTheApplication()">
+                <span>Given user opens the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.verifyUserIsOnLoginPage()">
+                <span>Then verify user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userEntersAnd(java.lang.String,java.lang.String)">
+                <span>When user enters "standard_user" and "secret_sauce"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userClicksOnLoginButton()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifyUserIsOnHomePage()">
+                <span>Then verify user is on home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.userClicksOnLowHighSorting()">
+                <span>When user clicks on low-high sorting</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifySortingIsCompleted()">
+                <span>Then verify sorting is completed</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="296"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">To verify user can sort products in Z-A order</p>
+            <p class="text-sm">
+              <span>5:31:47 pm</span> / <span>00:00:11:458</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">To verify user can sort products in Z-A order</h5>
+<span class='badge badge-success'>05.12.2025 5:31:47 pm</span>
+<span class='badge badge-danger'>05.12.2025 5:31:58 pm</span>
+<span class='badge badge-default'>00:00:11:458</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=296</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="297"><span class="badge log pass-bg mr-2">Pass</span>To validate user can sort products in Z-A order</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userOpensTheApplication()">
+                <span>Given user opens the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.verifyUserIsOnLoginPage()">
+                <span>Then verify user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userEntersAnd(java.lang.String,java.lang.String)">
+                <span>When user enters "standard_user" and "secret_sauce"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userClicksOnLoginButton()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifyUserIsOnHomePage()">
+                <span>Then verify user is on home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.userClicksOnZASorting()">
+                <span>When user clicks on Z-A sorting</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.HomeStep.verifySortingIsCompleted()">
+                <span>Then verify sorting is completed</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="307"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">To verify website loads successfully with stable internet connection</p>
+            <p class="text-sm">
+              <span>5:31:58 pm</span> / <span>00:00:04:913</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">To verify website loads successfully with stable internet connection</h5>
+<span class='badge badge-success'>05.12.2025 5:31:58 pm</span>
+<span class='badge badge-danger'>05.12.2025 5:32:03 pm</span>
+<span class='badge badge-default'>00:00:04:913</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=307</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="308"><span class="badge log pass-bg mr-2">Pass</span>To validate website loads successfully with stable internet connection</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.userOpensTheApplication()">
+                <span>Given user opens the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.automation.steps.LoginStep.verifyUserIsOnLoginPage()">
+                <span>Then verify user is on login page</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>17:27:48 pm</td>
+<td>
+<a href="#" class="linked" test-id='92' id='102'>And verify checkout button is disabled</a>
+<div class="">
+<span class="badge badge-default">To verify checkout button is disabled when cart is empty.To validate checkout button is disabled when cart is empty.And verify checkout button is disabled</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c05cd28cde1617b9d0c05a831daff6cb97fd9fd5/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
