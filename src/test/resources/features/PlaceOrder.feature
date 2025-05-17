@@ -1,3 +1,4 @@
+@demo
 Feature: To verify user can place an order
 
   Scenario: To validate user can place an order

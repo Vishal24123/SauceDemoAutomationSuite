@@ -1,3 +1,4 @@
+@fail
 Feature: To verify checkout button is disabled when cart is empty
 
   Scenario: To validate checkout button is disabled when cart is empty
