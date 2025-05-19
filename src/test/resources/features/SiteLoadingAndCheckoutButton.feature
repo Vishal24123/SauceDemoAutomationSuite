@@ -1,3 +1,10 @@
+Feature: To verify website loads successfully with stable internet connection
+
+  Scenario: To validate website loads successfully with stable internet connection
+
+    Given user opens the application
+    Then verify user is on login page
+
 @fail
 Feature: To verify checkout button is disabled when cart is empty
 
@@ -11,3 +18,4 @@ Feature: To verify checkout button is disabled when cart is empty
     When user clicks on cart button
     Then verify user is on cart page
     And verify checkout button is disabled
+

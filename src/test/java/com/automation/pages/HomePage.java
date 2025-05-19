@@ -37,7 +37,7 @@ public class HomePage extends BasePage{
 
 
     public boolean isHomePageDisplayed() {
-        pause(5000);
+        pause(2000);
         return isElementPresent(cartIcon);
     }
 

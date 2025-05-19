@@ -1,13 +1,13 @@
-@demo
-Feature: To verify user can place an order
+Feature: To verify end-to-end functionality of the application
 
-  Scenario: To validate user can place an order
-
+  Background:
     Given user opens the application
     Then verify user is on login page
     When user enters "standard_user" and "secret_sauce"
     And user clicks on login button
     Then verify user is on home page
+
+  Scenario: To validate user can place an order
     When user clicks on add to cart button of the first product
     Then verify cart quantity equals 1
     When user clicks on cart button
@@ -20,3 +20,8 @@ Feature: To verify user can place an order
     Then verify user is on review page
     When user clicks on finish button
     Then verify is on order confirmation page
+
+  Scenario: To validate that user can logout successfully
+    When user clicks on hamburger menu
+    And user clicks on logout option
+    Then verify user is on login page

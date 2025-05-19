@@ -14,7 +14,9 @@ public class DriverManager {
 
     public static void createDriver(){
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("--incognito");
         options.addArguments("--disable-blink-features=AutomationControlled");
+        options.addArguments("--disable-infobars");
         options.setExperimentalOption("excludeSwitches", new String[]{"enable-com.automation"});
         options.setExperimentalOption("useAutomationExtension", false);
         driver = new ChromeDriver(options);
