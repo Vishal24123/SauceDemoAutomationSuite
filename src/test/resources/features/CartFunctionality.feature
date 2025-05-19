@@ -7,21 +7,21 @@ Feature: To verify Cart Functionality
     And user clicks on login button
     Then verify user is on home page
 
-  Scenario: To validate user can add 1 product to the cart
+  Scenario: To validate user can add product to the cart
     When user clicks on add to cart button of the first product
     Then verify cart quantity equals 1
     When user clicks on cart button
     Then verify user is on cart page
     And verify the product is add to the cart
 
-  Scenario: To validate user can add 2 products to cart
+  Scenario: To validate user can add Multiple products (2 products) to cart
     When user clicks on add to cart button of 2 product
     Then verify cart quantity equals 2
     When user clicks on cart button
     Then verify user is on cart page
     And verify 2 products are add to the cart
 
-  Scenario: To validate user can add 3 products to cart
+  Scenario: To validate user can add Multiple products (3 products) to cart
     When user clicks on add to cart button of 3 product
     Then verify cart quantity equals 3
     When user clicks on cart button
